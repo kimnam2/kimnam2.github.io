@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="/resources/css/style.css">
+    <script src="/resources/plugin/jquery/jquery.min.js"></script>
+    <script src="/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/resources/js/ui.js"></script>
+    
+    <!-- gsap -->
+    <script src="/resources/plugin/gsap/gsap.min.js"></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="/resources/plugin/aos/aos.css">
+    <script src="/resources/plugin/aos/aos.js"></script>
+    <!-- scroll drag -->
+    <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+</head>
+
+<body class="body-main">
+    
+    <div id="wrap">
+        <div id="header-block">
+            <header class="header">
+                <div class="header__home"> <a href="#header-block">Home</a> </div>
+                <div class="header__index"><a href="#index-wrap">Index</a></div>
+            </header>
+        </div>
+        <div id="content-block">
+            <div class="main-visual">
+                <h1 class="main-visual__title">I design - users yours</h1>
+                <canvas id="canvas"></canvas>
+                <div class="scroll-down">
+                    <span class="bar"></span>
+                    <p class="scroll-down__text">Scroll Down</p>
+                </div>
+                
+            </div>
+            <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#tap-1" role="tab" aria-controls="home" aria-selected="true">
+                        <span class="category">UX/UI Build <i class="count">16</i></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tap-2" role="tab" aria-controls="profile" aria-selected="false">
+                        <span class="category">UX/UI Build<i class="count">8</i></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tap-3" role="tab" aria-controls="profile" aria-selected="false">
+                        <span class="category">UX/UI Build<i class="count">7</i></span>
+                    </a>
+                </li>
+            </ul> -->
+            <div class="tab-content" id="myTabContent">
+                <p class="text__port">Port</p>
+                <p class="text__folio">folio</p>
+
+                <div class="img-wrap">
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/01.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/02.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content position-top"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/03.png')"></div>
+                    </div>
+                    <div class="img-wrap__content position-top"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/04.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+                        <div class="img-wrap__img" ></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/05.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/06.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/07.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/08.png')"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100" data-aos-once="true">
+                        <div class="img-wrap__img" ></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300" data-aos-once="true">
+                        <div class="img-wrap__img none__img"></div>
+                    </div>
+                    <div class="img-wrap__content"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-once="true">
+                        <div class="img-wrap__img" style="background-image:url('/resources/images/10.png')"></div>
+                    </div>
+                </div>
+                <!-- <div class="tab-pane fade active show" id="tap-1" role="tabpanel" aria-labelledby="home-tab">
+                </div> -->
+                <!-- <div class="tab-pane fade" id="tap-2" role="tabpanel" aria-labelledby="home-tab">
+
+                </div>
+                <div class="tab-pane fade" id="tap-3" role="tabpanel" aria-labelledby="home-tab">
+
+                </div> -->
+            </div>
+            <div class="index-wrap" id="index-wrap">
+                <p class="index-wrap__text">Index</p>
+                <div class="d-flex">
+                    <div class="index-wrap__img">
+                        <img src="../resources/images/01_portfolio.png" alt="" class="img_1 active">
+                        <img src="../resources/images/02_portfolio.png" alt="" class="img_2">
+                        <img src="../resources/images/03_portfolio.png" alt="" class="img_3">
+                        <img src="../resources/images/04_portfolio.png" alt="" class="img_4">
+                        <img src="../resources/images/05_portfolio.png" alt="" class="img_5">
+                        <img src="../resources/images/06_portfolio.png" alt="" class="img_6">
+                        <img src="../resources/images/07_portfolio.png" alt="" class="img_7">
+                        <img src="../resources/images/08_portfolio.png" alt="" class="img_8">
+                        <img src="../resources/images/09_portfolio.png" alt="" class="img_9">
+                        <img src="../resources/images/10_portfolio.png" alt="" class="img_10">
+                        <img src="../resources/images/11_portfolio.png" alt="" class="img_11">
+                        <img src="../resources/images/12_portfolio.png" alt="" class="img_12">
+                        <img src="../resources/images/13_portfolio.png" alt="" class="img_13">
+                        <img src="../resources/images/14_portfolio.png" alt="" class="img_14">
+                        <img src="../resources/images/15_portfolio.png" alt="" class="img_15">
+                        <img src="../resources/images/16_portfolio.png" alt="" class="img_16">
+                        <img src="../resources/images/17_portfolio.png" alt="" class="img_17">
+                        <img src="../resources/images/18_portfolio.png" alt="" class="img_18">
+                        <img src="../resources/images/19_portfolio.png" alt="" class="img_19">
+                        <img src="../resources/images/20_portfolio.png" alt="" class="img_20">
+                        <img src="../resources/images/21_portfolio.png" alt="" class="img_21">
+                        <img src="../resources/images/22_portfolio.png" alt="" class="img_22">
+                        <img src="../resources/images/23_portfolio.png" alt="" class="img_23">
+                        <img src="../resources/images/24_portfolio.png" alt="" class="img_24">
+                        <img src="../resources/images/25_portfolio.png" alt="" class="img_25">
+                        <img src="../resources/images/26_portfolio.png" alt="" class="img_26">
+                        <img src="../resources/images/27_portfolio.png" alt="" class="img_27">
+                        <img src="../resources/images/28_portfolio.png" alt="" class="img_28">
+                        <img src="../resources/images/29_portfolio.png" alt="" class="img_29">
+                    </div>
+                    <div class="index-list">
+                        <ul class="index-list__content">
+                            <li class="active">Nongshim <span>UI/UX Build</span></li>
+                            <li>Noodle Foodle <span>UI/UX Build</span></li>
+                            <li>Yegaram Bank <span>UI/UX Build</span></li>
+                            <li>KBSTAR ETF <span>UI/UX Build</span></li>
+                            <li>Blizzard  <span>Maintenance</span></li>
+                            <li>KG Engineering <span>Proposal</span></li>
+                            <li>HANSOME <span>Proposal</span></li>
+                            <li>HDC <span>UI/UX Build</span></li>
+                            <li>Park Roch <span>UI/UX Build</span></li>
+                            <li>SG Data Total Potal <span>UI/UX Build</span></li>
+                            <li>Samjin Pharmacy <span>UI/UX Build</span></li>
+                            <li>Hwawoo <span>UI/UX Build</span></li>
+                            <li>CJ ENM build <span>UI/UX Build</span></li>
+                            <li>LH Corp. <span>UI/UX Build</span></li>
+                            <li>SeAH A&D <span>UI/UX Build</span></li>
+                            <li>Nongshim Global <span>UI/UX Build</span></li>
+                            <li>SEMES <span>UI/UX Build</span></li>
+                            <li>INFINIQ <span>UI/UX Build</span></li>
+                            <li>CJ ENM <span>Maintenance</span></li>
+                            <li>Stone Music Ent <span>Maintenance</span></li>
+                            <li>Yedaham <span>Maintenance</span></li>
+                            <li>Seah Holdings <span>Maintenance</span></li>
+                            <li>Goryo Savings Bank <span>Maintenance</span></li>
+                            <li>Namhae Chemical <span>Proposal</span></li>
+                            <li>LS Cable N System <span>Proposal</span></li>
+                            <li>Sansu water <span>Proposal</span></li>
+                            <li>DAEBANG N Detre <span>Proposal</span></li>
+                            <li>UNICEF <span>Proposal</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p class="copyright">Copyright @ KIMNAMHEE. All Rights Reserved</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="/resources/js/ball.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+body{color:#111;}
+#wrap{
+    width:100%;height:100%;
+}
+.header{
+    width:100%; height:75px; position:fixed;top:0;left:0; display:flex; align-items:center;justify-content: space-between;padding: 0 30px;background-color: #fff;z-index: 100;font-family: 'newyork';font-size:30px;
+} 
+@keyframes scroll{
+    from{
+        height:0px;
+    }
+    to{
+        height:30px;
+    }
+}
+// #content-block{padding-top:85px;}
+.main-visual{width:100%;height: calc(100vh - 73px); position: relative;margin-top:85px;
+    .main-visual__title{width:100%;font-size:120px; font-family: 'newyork'; position: absolute; top:43%; left: 50%; transform: translate(-50%, -50%); text-align:center;color:#000; font-weight:400;}
+    .scroll-down{
+        position: absolute; bottom:5%; left:50%; transform:translateX(-50%);
+        .scroll-down__text{font-size:14px; font-family: 'Roboto';}
+        .bar{position: absolute; width: 1px; height:0; background-color:#000; left:50%; top:-35px; animation-name:scroll; animation-duration:1.5s;  animation-iteration-count:infinite;}   
+    }
+  
+}
+.tab-content{
+    width:100%;height:100%;margin-top:350px; position: relative;
+    .text__port{font-family: 'newyork'; position: absolute; font-size:450px; left:4%; top:-24%; line-height: 1;}
+    .text__folio{font-family: 'newyork'; position: absolute; font-size:450px; z-index: 10; line-height: 1; right:5%; top:8%;}
+}
+.nav-tabs{
+    width:100%;justify-content: center;border-top:1px solid #ddd;border-bottom:1px solid #ddd;
+    .nav-link{
+        width:250px;border:0;padding: 1.5rem 3rem;text-align:center;
+        &.active{border-color: transparent;border:0;background-color: #000; color: #fff;}
+        .category{
+            position: relative;
+            .count{position: absolute; font-size: 12px; color: red;top:0; right:-20px;}
+        }
+    }
+}
+#canvas {
+    width: 100% !important;height: calc(100vh - 73px) !important;
+  }
+.img-wrap{
+    display:flex; align-items: center;justify-content: center;flex-flow:wrap;
+    .img-wrap__content{
+        padding:10px;
+    }
+    .img-wrap__img{
+        width:296px;height:360px;background-size:cover; background-position: center;
+        &.none__img{background-color: transparent;}
+        &.left-img{
+            position: relative;background-color:transparent;
+            &::after{
+                content:"";position: absolute;width:100%;height:100%;
+                right:-140px;
+            }
+        }
+    }
+    .position-top{margin-top: -360px;}
+}
+.index-wrap{
+    display:flex; align-items: center; justify-content: center; margin-top: 20vh;
+    position: relative; overflow-y: hidden;
+    
+    .index-wrap__img{
+        img{display: none; position: relative;
+            &.active{display: block; animation-name:imgSlide; animation-duration:.5s;}
+        }
+        @keyframes imgSlide{
+            from{
+                right: 40px;
+            }
+            to{ 
+                right: 0;
+            }
+        }
+    }
+
+    .index-list{
+        margin-left: 160px; height: 82vh;
+        .index-list__content{
+            padding:40px 0; width: 400px; height: 100%; cursor: grab;
+            li{width: 100%; font-size:30px; font-family: "Roboto";margin-bottom: 15px; line-height: 1.5; color: #999; font-weight: 300; display: flex; align-items: center;
+                &.active{ color:#000; position: relative;
+                    &::after{content:""; width:150px; height: 1px; background-color: #000; position: absolute; left: -50%; top:50%; transform: translateY(-50%);animation-name:leftbar; animation-duration:.5s;}
+                    span{font-size: 16px; display: inline-block; margin-left: 40px;}
+                }
+                &:last-child{margin-bottom: 0;}
+                span{display: none;}
+                
+            }
+            @keyframes leftbar{
+                from{
+                    width:0px;
+                }
+                to{ 
+                    width:150px;
+                }
+            }
+        }
+    }
+
+    .index-wrap__text{
+        font-size: 210px; font-family: "Newyork"; position: absolute; left:0; top:17%;
+        transform: rotate(90deg);
+    }
+}
+
+footer{
+   margin: 20vh 0 10vh 0;
+    .copyright{font-size: 14px; font-family: "Roboto"; text-align: center;}
+}
