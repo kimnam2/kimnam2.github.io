@@ -12,4 +12,7 @@ $(document).ready(function () {
         var idx = $(this).index() + 1;
         $('.img_'+ idx).addClass('active').siblings().removeClass('active');
     })
+    // $('.img-wrap__content > a').hover(function(){
+    //     $(this).children(".img-wrap__img").addClass('hover').siblings().children(".img-wrap__img").removeClass('hover');
+    // })
 })

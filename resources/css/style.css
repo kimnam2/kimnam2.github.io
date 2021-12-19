@@ -12622,6 +12622,7 @@ body {
   height: 360px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .img-wrap .img-wrap__img.none__img {
@@ -12639,6 +12640,44 @@ body {
   width: 100%;
   height: 100%;
   right: -140px;
+}
+
+.img-wrap .img-wrap__img .hover-text {
+  display: none;
+}
+
+.img-wrap .img-wrap__img.hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: .7;
+}
+
+.img-wrap .img-wrap__img.hover .hover-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  font-weight: 300;
+}
+
+.img-wrap .img-wrap__img.hover .hover-text .hover-text__title {
+  font-size: 24px;
+}
+
+.img-wrap .img-wrap__img.hover .hover-text .hiver-text__date {
+  font-family: "Roboto";
+  font-size: 16px;
 }
 
 .img-wrap .position-top {
@@ -12778,7 +12817,7 @@ body {
   font-family: "Newyork";
   position: absolute;
   left: 0;
-  top: 17%;
+  top: 25%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
