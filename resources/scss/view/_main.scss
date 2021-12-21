@@ -164,6 +164,12 @@ body{color:#111; min-width: 1900px;}
     }
 }
 
+.swipe-down{
+    position: absolute; bottom:45.5%; left:47%; transform:translateX(-50%);
+    .swipe-down__text{font-size:20px; font-family: 'Roboto';}
+    .bar{position: absolute; width: 1px; height:0; background-color:#000; left:50%; top:-35px; animation-name:scroll; animation-duration:1.5s;  animation-iteration-count:infinite;}   
+}
+
 footer{
    margin: 20vh 0 10vh 0;
     .copyright{font-size: 14px; font-family: "Roboto"; text-align: center;}

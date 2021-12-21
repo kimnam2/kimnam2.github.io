@@ -15,4 +15,7 @@ $(document).ready(function () {
     $('.link-btn').hover(function(){
         $(this).addClass('hover').parent().siblings().find('.link-btn').removeClass('hover');
     })
+    $('.index-list__content').click(function(){
+        $('.swipe-down').hide();
+    })
 })
