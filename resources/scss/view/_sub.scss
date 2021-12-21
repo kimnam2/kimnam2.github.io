@@ -1,0 +1,48 @@
+.sub-content{
+    position: relative; width:100%; height:685px;
+    .sub-content__title{
+        font-size: 110px; font-family: "Newyork"; font-weight: 400; position: absolute; top:36.8%; left:50%; transform: translate(-50%, -50%); z-index: 2;animation-name:textUp; animation-duration:1.5s;
+    }
+    @keyframes textUp{
+        from{
+            opacity: 0; top:45%;
+        }
+        to{ 
+            opacity: 1; top:36.8%;
+        }
+    }
+    .sub-content__banner{
+        position: absolute; bottom:0; left: 0;
+    }
+}
+.work{
+    position: absolute; font-family: "Newyork"; font-size: 16px; top:45px; z-index: 101; left:33%;
+}
+.sub-desc{
+    display: flex; justify-content: center; margin-top: 130px;
+    .sub-desc__list{
+        div{padding-right:30px;line-height: 24px;
+            &:last-child{padding-right:0;}
+        }
+    }
+    .sub-txt{
+        margin-top: 40px; line-height: 24px;
+    }
+    .sub-desc__btn{
+        width:165px; height:45px; line-height:45px; border:1px solid #000; display: inline-block; text-align: center;margin-left: -160px;
+        &:hover{
+            animation-name:btnAnimation; animation-duration:.5s;  border:1px solid #fff; color: #fff; background-color: #000;
+        }
+    }
+    .content{margin-left: 160px;}
+    
+    @keyframes btnAnimation{
+        from{
+            border:1px solid #000; color: #000; background-color: #fff;
+        }
+        to{ 
+            border:1px solid #fff; color: #fff; background-color: #000;
+        }
+    }
+}
+.sub-img-wrap{margin-top: 150px;}

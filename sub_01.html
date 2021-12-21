@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="resources/plugin/jquery/jquery.min.js"></script>
+    <script src="resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/js/ui.js"></script>
+    
+    <!-- gsap -->
+    <script src="resources/plugin/gsap/gsap.min.js"></script>
+    <!-- aos -->
+    <link rel="stylesheet" href="resources/plugin/aos/aos.css">
+    <script src="resources/plugin/aos/aos.js"></script>
+    <!-- scroll drag -->
+    <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+</head>
+
+<body class="body-main">
+    
+    <div id="wrap">
+        <div id="header-block">
+            <header class="header">
+                <div class="header__home"> <a href="index.html">Home</a> </div>
+                <div class="header__index"><a href="#index-wrap">Index</a></div>
+            </header>
+        </div>
+        <div id="content-block">
+            <p class="work">UI/UX Build</p>
+            <div class="sub-content">
+                <h1 class="sub-content__title">Nongshim</h1>
+                <div class="sub-content__banner">
+                    <img src="resources/images/01_Nongshim_sub.png" alt="">
+                </div>
+            </div>
+            <div class="sub-desc">
+                <a href="" target="_blank" class="sub-desc__btn">Launch</a>
+                <div class="content">
+                    <div class="sub-desc__list d-flex align-items-center">
+                        <div class="sub-desc__date">
+                            <p>농심</p>
+                            <p>2020.03.04</p>
+                        </div>
+                        <div class="sub-desc__client">
+                            <p>Client</p>
+                            <p>농심</p>
+                        </div>
+                        <div class="sub-desc__contribution">
+                            <p>기여도</p>
+                            <p>60%</p>
+                        </div>
+                    </div>
+                    <p class="sub-txt">
+                        농심 공식오피셜 사이트는 ‘콘텐츠’, ‘서비스’, ‘디자인’ 측면에서 농심의 기업 인지도를 재확립하고, 고객 서비스의 품질을 높여<br>
+                        농심의 브랜드 강화를 목적으로 진행됐습니다. 기존 농심 오피셜 및 농시미 이벤트 사이트를 통합하고, <br>
+                        이를 통해 고객과 함께하는 농심의 기업 이미지를 효과적으로 알리도록 노력했습니다.
+                    </p>
+                </div>
+            </div>
+            <div class="sub-img-wrap">
+                <img src="resources/images/sub_img_01.png" alt="">
+            </div>
+            <footer>
+                <p class="copyright">Copyright @ KIMNAMHEE. All Rights Reserved</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="resources/js/ball.js"></script>
+    <script>
+        $(document).ready(function () {
+            AOS.init();
+        })
+    </script>
+</body>
+
+</html>
