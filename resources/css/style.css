@@ -10361,6 +10361,7 @@ body {
 .index-wrap .index-list {
   margin-left: 160px;
   height: 82vh;
+  position: relative;
 }
 
 .index-wrap .index-list .index-list__content {
@@ -10452,14 +10453,12 @@ body {
 
 .swipe-down {
   position: absolute;
-  bottom: 45.5%;
-  left: 47%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  bottom: 0;
+  right: 0;
 }
 
 .swipe-down .swipe-down__text {
-  font-size: 20px;
+  font-size: 14px;
   font-family: 'Roboto';
 }
 
@@ -10623,5 +10622,9 @@ footer .copyright {
 
 .sub-img-wrap {
   margin-top: 150px;
+}
+
+.sub-video {
+  margin-top: 200px;
 }
 /*# sourceMappingURL=style.css.map */
