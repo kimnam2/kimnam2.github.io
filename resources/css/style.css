@@ -7,37 +7,37 @@
  */
 @font-face {
   font-family: 'newyork';
-  src: url("../fonts/newyork/newyork.otf");
+  src: url("../fonts/newyork/newyork.otf") format("opentype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Extralight.ttf");
+  src: url("../fonts/Roboto/Roboto-Extralight.ttf") format("truetype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Light.ttf");
+  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../fonts/Roboto/Roboto-Bold.ttf");
+  src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
@@ -9969,7 +9969,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 30px;
+  padding: 10px 60px;
   background-color: #fff;
   z-index: 100;
   font-family: 'newyork';
@@ -10240,6 +10240,7 @@ body {
 }
 
 .img-wrap .link-btn.hover .img-wrap__img .hover-text {
+  width: 100%;
   display: block;
   position: absolute;
   top: 50%;
@@ -10325,6 +10326,10 @@ body {
   margin-top: 20vh;
   position: relative;
   overflow-y: hidden;
+}
+
+.index-wrap .d-flex {
+  margin-left: 125px;
 }
 
 .index-wrap .index-wrap__img img {
@@ -10415,6 +10420,14 @@ body {
   margin-left: 40px;
 }
 
+.index-wrap .index-list .index-list__content li.active a {
+  color: #000;
+}
+
+.index-wrap .index-list .index-list__content li a {
+  color: #999;
+}
+
 .index-wrap .index-list .index-list__content li:last-child {
   margin-bottom: 0;
 }
@@ -10445,7 +10458,7 @@ body {
   font-size: 210px;
   font-family: "Newyork";
   position: absolute;
-  left: 0;
+  left: -100px;
   top: 25%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -10475,6 +10488,119 @@ body {
           animation-duration: 1.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.right-menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10002;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.right-menu.active {
+  -webkit-animation-name: openIndex;
+          animation-name: openIndex;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  visibility: inherit;
+  opacity: 1;
+}
+
+.right-menu .index-wrap__text {
+  top: 150px;
+  left: -25px;
+}
+
+.right-menu .index-wrap {
+  margin-top: 170px;
+}
+
+.right-menu .d-flex {
+  margin-left: 300px;
+}
+
+.right-menu .right-menu__header {
+  width: 100%;
+  height: 95px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 60px;
+  background-color: #fff;
+  z-index: 100;
+  font-family: 'newyork';
+  font-size: 30px;
+}
+
+.right-menu .right-menu__header .header__home {
+  position: relative;
+}
+
+.right-menu .right-menu__header .header__home:hover::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: #ffe200;
+  border-radius: 50%;
+  position: absolute;
+  right: -22px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+  -webkit-animation-name: headerHomeHover;
+          animation-name: headerHomeHover;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+}
+
+@keyframes headerHomeHover {
+  from {
+    width: 1px;
+    height: 0px;
+    right: 0;
+  }
+  to {
+    width: 60px;
+    height: 60px;
+    right: -22px;
+  }
+}
+
+@-webkit-keyframes openIndex {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: inherit;
+    opacity: 1;
+  }
+}
+
+@keyframes openIndex {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: inherit;
+    opacity: 1;
+  }
 }
 
 footer {

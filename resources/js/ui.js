@@ -18,4 +18,11 @@ $(document).ready(function () {
     $('.index-list__content').click(function(){
         $('.swipe-down').hide();
     })
+
+    $('.header__index').click(function(){
+        $(".right-menu").addClass('active');
+    })
+    $('.btn-close').click(function(){
+        $(".right-menu").removeClass('active');
+    })
 })
