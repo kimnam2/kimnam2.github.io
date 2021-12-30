@@ -9975,6 +9975,10 @@ body {
   max-width: 750px;
 }
 
+.modal-dialog.size-mb .modal-close {
+  right: 500px;
+}
+
 .modal-close {
   position: fixed;
   top: 15px;
@@ -10651,7 +10655,7 @@ footer .copyright {
   font-family: "Newyork";
   font-weight: 400;
   position: absolute;
-  top: 36.8%;
+  top: 34.8%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -10669,7 +10673,7 @@ footer .copyright {
   }
   to {
     opacity: 1;
-    top: 36.8%;
+    top: 34.8%;
   }
 }
 
@@ -10680,7 +10684,7 @@ footer .copyright {
   }
   to {
     opacity: 1;
-    top: 36.8%;
+    top: 34.8%;
   }
 }
 
