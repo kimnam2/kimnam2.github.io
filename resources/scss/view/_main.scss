@@ -10,7 +10,7 @@ body{color:#111; min-width: 1900px;}
 .modal-close{position: fixed; top:15px; right:200px; opacity: 1;}
 .modal-body{ padding: 0;}
 .header{
-    width:100%; height:95px; position:fixed;top:0;left:0; display:flex; align-items:center;justify-content: space-between;padding: 10px 60px;background-color: #fff;z-index: 100;font-family: 'Newyork';font-size:30px;
+    width:100%; height:95px; position:fixed;top:0;left:0; display:flex; align-items:center;justify-content: space-between;padding: 10px 60px;background-color: #fff;z-index: 100;
 
     .header__home{
         position: relative;
@@ -55,7 +55,7 @@ body{color:#111; min-width: 1900px;}
 }
 // #content-block{padding-top:85px;}
 .main-visual{width:100%;height: calc(100vh - 73px); position: relative;margin-top:85px;
-    .main-visual__title{width:100%;font-size:120px; font-family: 'Newyork'; position: absolute; top:43%; left: 50%; transform: translate(-50%, -50%); text-align:center;color:#000; font-weight:400;}
+    .main-visual__title{width:100%; position: absolute; top:43%; left: 50%; transform: translate(-50%, -50%); text-align:center;}
     .scroll-down{
         position: absolute; bottom:5%; left:50%; transform:translateX(-50%);
         .scroll-down__text{font-size:14px; font-family: 'Roboto';}
@@ -126,7 +126,7 @@ body{color:#111; min-width: 1900px;}
 .index-wrap{
     display:flex; align-items: center; justify-content: center; margin-top: 20vh;
     position: relative; overflow-y: hidden;
-    .d-flex{margin-left:125px;}
+    .d-flex{margin-left:200px;}
     .index-wrap__img{
         img{display: none; position: relative;
             &.active{display: block; animation-name:imgSlide; animation-duration:.5s;}
@@ -168,8 +168,7 @@ body{color:#111; min-width: 1900px;}
     }
 
     .index-wrap__text{
-        font-size: 210px; font-family: "Newyork"; position: absolute; left:-100px; top:25%;
-        transform: rotate(90deg);
+        position: absolute; left:100px; top:50px;
     }
 }
 
@@ -181,9 +180,8 @@ body{color:#111; min-width: 1900px;}
 
 .right-menu{width:100%; height: 100%; position:fixed; top:0; left:0; background-color:#fff; z-index: 10002; visibility:hidden; opacity: 0; display: flex; align-items: center; justify-content: center;
     &.active{animation-name:openIndex; animation-duration:.5s;  visibility:inherit; opacity: 1;}
-    .index-wrap__text{top:150px; left: -25px;}
     .index-wrap{ width: 100%; margin-top:0;}
-    .d-flex{margin-left: 300px;}
+    .d-flex{margin-left: 200px;}
     .right-menu__header{
         width:100%; height:95px; position:absolute;top:0;left:0; display:flex; align-items:center;justify-content: space-between;padding: 10px 60px;background-color: #fff;z-index: 100;font-family: 'Newyork';font-size:30px;
         .header__home{
