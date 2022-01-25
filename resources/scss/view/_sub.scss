@@ -21,20 +21,31 @@
 .sub-desc{
     display: flex; justify-content: center; margin-top: 130px;
     .sub-desc__list{
-        div{padding-right:30px;line-height: 24px;
-            &:last-child{padding-right:0;}
+        .sub-desc__title{font-size:24px; font-family: "Roboto"; font-weight: 500; color: #333; height: 48px; display: flex; align-items: center;
+            &.lg{font-size: 36px; color: #000;}
+        }
+        .sub-desc__box{
+            height: 180px; position: relative; margin-top: 20px;
+            &.overview{ width: 565px; margin-right: 135px;}
+            &.role{width: 310px; margin-right: 105px;}
+            &.date{width: 170px;}
+            .sub__top{position: absolute; left:0; top: 0; letter-spacing: -0.4px; line-height: 28px;}
+            .sub__bottom{position: absolute; left:0; bottom: 0;}
+        }
+        .sub-desc__overview{font-size: 20px; font-weight: 500; }
+        .sub-desc__role{font-size: 20px; font-weight: 500;font-family: "Roboto";}
+        ul{
+            li{line-height: 28px;}
         }
     }
-    .sub-txt{
-        margin-top: 40px; line-height: 24px;
-    }
+    
     .sub-desc__btn{
-        width:165px; height:45px; line-height:45px; border:1px solid #000; display: inline-block; text-align: center;margin-left: -160px;
+        width:165px; height:45px; line-height:45px; border:1px solid #000; display: inline-block; text-align: center; position: absolute; left:0; bottom: 0;
         &:hover{
             animation-name:btnAnimation; animation-duration:.5s;  border:1px solid #fff; color: #fff; background-color: #000;
         }
     }
-    .content{margin-left: 160px;}
+    .content{margin-right: 110px;}
     
     @keyframes btnAnimation{
         from{

@@ -9963,6 +9963,16 @@ body {
   display: inline-block;
 }
 
+.icon-arrow {
+  width: 17px;
+  height: 13px;
+  background-image: url("/resources/images/icon-arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-left: 10px;
+}
+
 .modal-header {
   background-color: transparent;
 }
@@ -10141,6 +10151,29 @@ body {
   text-align: center;
 }
 
+.main-visual .move-portfolio {
+  width: 300px;
+  height: 70px;
+  border-radius: 35px;
+  border: 1px solid #000;
+  display: inline-block;
+  position: absolute;
+  bottom: 5%;
+  left: 60px;
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .main-visual .scroll-down {
   position: absolute;
   bottom: 5%;
@@ -10233,6 +10266,7 @@ body {
 #canvas {
   width: 100% !important;
   height: calc(100vh - 73px) !important;
+  margin-top: 50px;
 }
 
 .img-wrap {
@@ -10713,18 +10747,72 @@ footer .copyright {
   margin-top: 130px;
 }
 
-.sub-desc .sub-desc__list div {
-  padding-right: 30px;
-  line-height: 24px;
+.sub-desc .sub-desc__list .sub-desc__title {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #333;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.sub-desc .sub-desc__list div:last-child {
-  padding-right: 0;
+.sub-desc .sub-desc__list .sub-desc__title.lg {
+  font-size: 36px;
+  color: #000;
 }
 
-.sub-desc .sub-txt {
-  margin-top: 40px;
-  line-height: 24px;
+.sub-desc .sub-desc__list .sub-desc__box {
+  height: 180px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.sub-desc .sub-desc__list .sub-desc__box.overview {
+  width: 565px;
+  margin-right: 135px;
+}
+
+.sub-desc .sub-desc__list .sub-desc__box.role {
+  width: 310px;
+  margin-right: 105px;
+}
+
+.sub-desc .sub-desc__list .sub-desc__box.date {
+  width: 170px;
+}
+
+.sub-desc .sub-desc__list .sub-desc__box .sub__top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  letter-spacing: -0.4px;
+  line-height: 28px;
+}
+
+.sub-desc .sub-desc__list .sub-desc__box .sub__bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.sub-desc .sub-desc__list .sub-desc__overview {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sub-desc .sub-desc__list .sub-desc__role {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Roboto";
+}
+
+.sub-desc .sub-desc__list ul li {
+  line-height: 28px;
 }
 
 .sub-desc .sub-desc__btn {
@@ -10734,7 +10822,9 @@ footer .copyright {
   border: 1px solid #000;
   display: inline-block;
   text-align: center;
-  margin-left: -160px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .sub-desc .sub-desc__btn:hover {
@@ -10748,7 +10838,7 @@ footer .copyright {
 }
 
 .sub-desc .content {
-  margin-left: 160px;
+  margin-right: 110px;
 }
 
 @-webkit-keyframes btnAnimation {
